@@ -1,9 +1,35 @@
 // Default variable overrides
-$body-bg: #fed;
+$body-bg: rgb(185, 241, 178);
 $body-color: #34a;
-$primary: teal;
+$primary: rgb(23, 0, 128);
 $secondary: green;
 $success: lightgreen;
+
+.wrapperMain {
+    display: flex;
+}
+
+aside {
+    width: 20%;
+}
+
+main {
+    width: 60%
+}
+
+input {
+    background-color: $primary;
+}
+
+textarea {
+    resize: none !important;
+    
+}
+
+.card {
+    margin: 0 auto;
+}
+
 
 
 @import "../node_modules/bootstrap/scss/bootstrap";
