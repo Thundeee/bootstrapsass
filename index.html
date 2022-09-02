@@ -1,12 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log in - Note Social - The Sticky Wall Social Network</title>
+    <link rel="stylesheet" href="./css/stylesheet.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar bg-light fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="home.html">
+          <img
+            src="./multimedia/noteSocial_Logo.png"
+            class="logo d-inline-block align-top img-fluid"
+            alt="Note Social Logo"
+          />
+          Note Social
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+              Note Social
+            </h5>
+            <button
+              type="button"
+              class="btn-close float-end"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <h6 id="loginStatus">Not logged in.</h6>
+
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="home.html"
+                  >Home</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="home.html"
+                  >About</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="home.html"
+                  >Privacy</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="home.html"
+                  >Contact</a
+                >
+              </li>
+
+              <br />
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="wrapperMain">
+      <aside></aside>
+      <main>
+        <div class="container">
+          <form class="form-signin">
+            <h2 class="form-signin-heading">Please sign in</h2>
+            <label for="inputEmail" class="sr-only">Email address</label>
+            <input
+              type="email"
+              id="inputEmail"
+              class="form-control"
+              placeholder="Email address"
+              required=""
+              autofocus=""
+            />
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input
+              type="password"
+              id="inputPassword"
+              class="form-control"
+              placeholder="Password"
+              required=""
+            />
+            <div class="checkbox">
+              <label>
+                <input
+                  type="checkbox"
+                  value="remember-me"
+                  aria-label="save login in the browser"
+                />
+                Remember me
+              </label>
+            </div>
+
+            <div class="logButtons">
+              <a href="home.html" class="btn btn-lg btn-primary btn-block">
+                <span>Sign in</span>
+              </a>
+
+              <a
+                href="home.html"
+                class="btn btn-lg btn-primary btn-block float-end"
+              >
+                <span>Can't login?</span>
+              </a>
+            </div>
+          </form>
+        </div>
+      </main>
+      <aside></aside>
+    </div>
+    <footer class="py-3 my-4">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item">
+          <a href="home.html" class="nav-link px-2 text-muted">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="index.html" class="nav-link px-2 text-muted">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="index.html" class="nav-link px-2 text-muted">Privacy</a>
+        </li>
+        <li class="nav-item">
+          <a href="index.html" class="nav-link px-2 text-muted">Contact</a>
+        </li>
+      </ul>
+      <p class="text-center text-muted">© 2022 Note Social, Inc</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>

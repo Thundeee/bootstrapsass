@@ -4,48 +4,100 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social Media</title>
+    <title>Home - Note Social - The Sticky Wall Social Network</title>
     <link rel="stylesheet" href="./css/stylesheet.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
 
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-light bg-light">
+  <nav class="navbar bg-light fixed-top">
+    <div class="container-fluid">
         <a class="navbar-brand" href="home.html">
-          <img src="https://picsum.photos/50" class="d-inline-block align-top" alt="SomeTalk">
-          SomeTalk
-        </a>  
+            <img src="./multimedia/noteSocial_Logo.png" class="logo d-inline-block align-top img-fluid" alt="Note Social Logo">
+            Note Social
+          </a> 
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Note Social</h5>
+          <button type="button" class="btn-close float-end" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          
+        </div>
         
-        <form class="form">
-            <input class="form-row" type="search" placeholder="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" href="index.html">Search</button>
+
+        <h6 id="loginStatus">Logged In As: Geir Åge</h6>
+    
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Profile.html">My Profile</a>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="home.html">About</a>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="home.html">Privacy</a>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="home.html">Contact</a>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Log Out</a>
+                            <br>
+
+
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
-
-          <img src="https://picsum.photos/100" class="rounded-circle" alt="Profile Picture">
-
-      </nav>
-</header>
+        </div>
+      </div>
+    </div>
+  </nav>
 <div class="wrapperMain">
 <aside></aside>
 <main>
-  <form class="form-control" alt ="post function">
-    <label for="post" class="form-label" id="postFunction">What is on your mind?</label>
-<textarea id="post" class="form-control"  maxlength="100"></textarea>
-<button></button>
-<button></button>
-<button></button>
-<button></button>
-<button type="submit" class="btn btn-primary float-end">Post!</button>
-  </form>
 
+
+  <form>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Topic</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="What's Your Sticky About?">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Title</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Give Your Sticky A Title!">
+  </div>
+
+
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Tell us what's on your mind!</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" maxlength="100"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary float-end">Stick!</button>
+
+</form>
 
 <div id="examplePosts">
+
+  <h2>Featured Posts</h2>
 
     <div class="card text-bg-secondary mb-3" style="max-width: 18rem;">
         <div class="card-header">Topic</div>
         <div class="card-body">
           <h5 class="card-title">Example title</h5>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <button class="like">
+            <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+          </button>
+          <button class="dislike">
+            <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+          </button>
         </div>
       </div>
 
@@ -54,6 +106,12 @@
     <div class="card-body">
       <h5 class="card-title">Example title</h5>
       <p class="card-text">Back in my day we didn't have these so called "social medias".</p>
+      <button class="like">
+        <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+      </button>
+      <button class="dislike">
+        <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+      </button>
     </div>
   </div>
 
@@ -61,10 +119,168 @@
   <div class="card text-bg-secondary mb-3" style="max-width: 18rem;">
     <div class="card-header">Topic</div>
     <div class="card-body">
-      <h5 class="card-title">Example title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <h5 class="card-title">Max characters</h5>
+      <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m
+      </p>
+        <button class="like">
+          <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+        </button>
+        <button class="dislike">
+          <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+        </button>
     </div>
   </div>
+
+  <h2>Your Feed</h2>
+
+
+  <div class="card text-bg-secondary mb-3" style="max-width: 18rem;">
+    <div class="card-header">Topic</div>
+    <div class="card-body">
+      <h5 class="card-title">Example title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <button class="like">
+        <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+      </button>
+      <button class="dislike">
+        <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+
+
+  <div class="card text-bg-secondary mb-3" style="max-width: 18rem;">
+    <div class="card-header">Topic</div>
+    <div class="card-body">
+      <h5 class="card-title">Example title</h5>
+      <p class="card-text">two words.</p>
+      <button class="like">
+        <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+      </button>
+      <button class="dislike">
+        <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="card text-bg-secondary mb-3" style="max-width: 18rem;">
+    <div class="card-header">Topic</div>
+    <div class="card-body">
+      <h5 class="card-title">Example title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <button class="like">
+        <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+      </button>
+      <button class="dislike">
+        <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+
+<div class="card text-bg-secondary mb-3" style="max-width: 18rem;">
+<div class="card-header">Topic</div>
+<div class="card-body">
+  <h5 class="card-title">Example title</h5>
+  <p class="card-text">Back in my day we didn't have these so called "social medias".</p>
+  <button class="like">
+    <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+  </button>
+  <button class="dislike">
+    <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+  </button>
+</div>
+</div>
+
+
+<div class="card text-bg-secondary mb-3" style="max-width: 18rem;">
+<div class="card-header">Topic</div>
+<div class="card-body">
+  <h5 class="card-title">Max characters</h5>
+  <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m
+
+    .</p>
+    <button class="like">
+      <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+    </button>
+    <button class="dislike">
+      <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+    </button>
+</div>
+</div>
+
+<div class="card text-bg-secondary mb-3" style="max-width: 18rem;">
+<div class="card-header">Topic</div>
+<div class="card-body">
+  <h5 class="card-title">Example title</h5>
+  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  <button class="like">
+    <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+  </button>
+  <button class="dislike">
+    <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+  </button>
+</div>
+</div>
+
+
+<div class="card text-bg-secondary mb-3" style="max-width: 18rem;">
+<div class="card-header">Topic</div>
+<div class="card-body">
+  <h5 class="card-title">Example title</h5>
+  <p class="card-text">two words.</p>
+  <button class="like">
+    <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+  </button>
+  <button class="dislike">
+    <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+  </button>
+</div>
+</div>
+
+<div class="card text-bg-secondary mb-3" style="max-width: 18rem;">
+  <div class="card-header">Topic</div>
+  <div class="card-body">
+    <h5 class="card-title">Example title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <button class="like">
+      <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+    </button>
+    <button class="dislike">
+      <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+    </button>
+  </div>
+</div>
+
+<div class="card text-bg-secondary mb-3" style="max-width: 18rem;">
+<div class="card-header">Topic</div>
+<div class="card-body">
+<h5 class="card-title">Example title</h5>
+<p class="card-text">Back in my day we didn't have these so called "social medias".</p>
+<button class="like">
+  <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+</button>
+<button class="dislike">
+  <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+</button>
+</div>
+</div>
+
+
+<div class="card text-bg-secondary mb-3" style="max-width: 18rem;">
+<div class="card-header">Topic</div>
+<div class="card-body">
+<h5 class="card-title">Max characters</h5>
+<p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m
+
+  .</p>
+  <button class="like">
+    <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+  </button>
+  <button class="dislike">
+    <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+  </button>
+</div>
+</div>
 
 
 </div>
@@ -75,13 +291,16 @@
 </div>
 <footer class="py-3 my-4">
   <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-    <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Home</a></li>
+    <li class="nav-item"><a href="home.html" class="nav-link px-2 text-muted">Home</a></li>
     <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">About</a></li>
     <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Privacy</a></li>
     <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Contact</a></li>
     <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Log Out</a></li>
   </ul>
-  <p class="text-center text-muted">© 2022 SomeTalk, Inc</p>
+  <p class="text-center text-muted">© 2022 Note Social, Inc</p>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
