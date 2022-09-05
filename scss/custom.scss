@@ -81,4 +81,34 @@ a:active:not(.navbar-brand) {
   margin-bottom: 1rem;
 }
 
+.profileMain {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+.sidePanel, .otherSidePanel {
+  width: 20%;
+  background-color: aqua;
+}
+
+.postFunctionProfile {
+  width: 30%;
+  margin: 3rem;
+}
+
+#profilePosts {
+  justify-content: center;
+}
+
+.line-break {
+  width: 100%
+}
+
+
+.statsProfile {
+  margin-top: 3rem;
+}
+
 @import "../node_modules/bootstrap/scss/bootstrap";
