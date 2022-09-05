@@ -1,9 +1,12 @@
 // Default variable overrides
-$body-bg: rgb(185, 241, 178);
-$body-color: #34a;
-$primary: rgb(23, 0, 128);
-$secondary: green;
-$success: lightgreen;
+$body-bg: #4f6ab3;
+$body-color: white;
+$primary: #fff157;
+$dark: #e6d94e;
+$secondary: #4296ac;
+$light: #fff7a3;
+
+$tablet: 768px;
 
 .logo {
   width: 50px;
@@ -27,12 +30,16 @@ main {
   width: 70%;
 }
 
-input {
-  background-color: $primary;
-}
-
 textarea {
   resize: none !important;
+}
+
+.form-group {
+  margin-bottom: 0.5rem;
+}
+
+.postFunctionHome {
+  padding-bottom: 38px;
 }
 
 #examplePosts {
@@ -43,6 +50,7 @@ textarea {
   justify-content: center;
 }
 
+h1,
 h2 {
   flex: 100%;
   text-align: center;
@@ -76,7 +84,7 @@ a:active:not(.navbar-brand) {
 }
 
 .logButtons a {
-    margin-top: 1rem;
+  margin-top: 1rem;
 
   margin-bottom: 1rem;
 }
@@ -85,30 +93,75 @@ a:active:not(.navbar-brand) {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  flex-direction: column;
 }
 
-
-.sidePanel, .otherSidePanel {
+.sidePanel,
+.otherSidePanel {
   width: 20%;
-  background-color: aqua;
+  margin: 0 auto;
+  min-width: fit-content;
+  padding-bottom: 1rem;
+}
+
+#bio {
+  margin: 1rem;
+}
+
+.pfp {
+  display: flex;
+  margin: 1rem auto;
+}
+
+.contacts {
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+
+  h3 {
+    width: 100%;
+  }
+
+  img {
+    flex: 0 0 26%;
+  }
 }
 
 .postFunctionProfile {
-  width: 30%;
-  margin: 3rem;
-}
-
-#profilePosts {
-  justify-content: center;
+  width: 80%;
+  margin: 3rem auto;
+  min-width: fit-content;
 }
 
 .line-break {
-  width: 100%
+  width: 100%;
 }
-
 
 .statsProfile {
   margin-top: 3rem;
+}
+
+@media screen and (min-width: $tablet) {
+  .profileMain {
+    flex-direction: row;
+  }
+  .sidePanel,
+  .otherSidePanel {
+    min-width: 165px;
+  }
+
+  .postFunctionProfile {
+    width: 30%;
+  }
+
+  .form-signin,
+  .postFunctionHome {
+    margin: 0 auto;
+    width: 40vw;
+    min-width: 450px;
+  }
 }
 
 @import "../node_modules/bootstrap/scss/bootstrap";

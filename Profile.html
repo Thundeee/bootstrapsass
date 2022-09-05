@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geir Åge - Note Social - The Sticky Wall Social Network</title>
     <link rel="stylesheet" href="./css/stylesheet.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
 
 
 </head>
 <body>
 <header>
-  <nav class="navbar bg-light fixed-top">
+  <nav class="navbar bg-dark fixed-top">
     <div class="container-fluid">
         <a class="navbar-brand" href="home.html">
             <img src="./multimedia/noteSocial_Logo.png" class="logo d-inline-block align-top img-fluid" alt="Note Social Logo">
@@ -21,15 +21,15 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Note Social</h5>
+          <h5 class="offcanvas-title text-black" id="offcanvasNavbarLabel">Note Social</h5>
           <button type="button" class="btn-close float-end" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           
         </div>
         
 
-        <h6 id="loginStatus">Logged In As: Geir Åge</h6>
+        <h6 id="loginStatus" class="text-black">Logged In As: Geir Åge</h6>
     
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
@@ -51,8 +51,8 @@
             </li>
           </ul>
           <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
+            <input class="form-control me-2 bg-light text-black" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-secondary" type="submit">Search</button>
           </form>
         </div>
       </div>
@@ -62,25 +62,28 @@
 <aside></aside>
 <main class="profileMain">
 
-<div class="sidePanel">
-  <h3>Om Geir Åge:</h3>
-  <p>Stødig kar, god og glad. hver dag står jeg opp med riktig fot. Vurderer å starte med flyging kanskje. Hvem vet haha! Bor i Bærgen og heier på Brann. Sosiale medier er noe nytt for meg!</p>
+<div class="sidePanel bg-secondary">
+  <h4 id="bio">Om Geir Åge:</h4>
+  <p id="bio">Stødig kar, god og glad. hver dag står jeg opp med riktig fot. Vurderer å starte med flyging kanskje. Hvem vet haha! Bor i Bærgen og heier på Brann. Sosiale medier er noe nytt for meg!</p>
 </div>
-<form class="postFunctionProfile">
+
+
+
+<form class="postFunctionProfile" >
   <div class="form-group">
     <label for="exampleFormControlInput1">Topic</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="What's Your Sticky About?">
+    <input type="text" class="form-control bg-light text-black" id="exampleFormControlInput1" maxlength="20"  placeholder="What's Your Sticky About?">
   </div>
 
   <div class="form-group">
     <label for="exampleFormControlInput1">Title</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Give Your Sticky A Title!">
+    <input type="text" class="form-control bg-light text-black" id="exampleFormControlInput1" maxlength="30" placeholder="Give Your Sticky A Title!">
   </div>
 
 
   <div class="form-group">
     <label for="exampleFormControlTextarea1">Tell us what's on your mind!</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" maxlength="100"></textarea>
+    <textarea class="form-control bg-light text-black" id="exampleFormControlTextarea1" maxlength="100" placeholder="Today I..."></textarea>
   </div>
   <button type="submit" class="btn btn-primary float-end">Stick!</button>
 
@@ -91,9 +94,11 @@
 
 
 
-<div class="otherSidePanel">
+<div class="otherSidePanel bg-secondary">
 
-  <h3>pfp</h3>
+<h1>Geir Åge</h1>
+<img src="https://picsum.photos/100" alt="Profile Picture" class="pfp img-fluid">
+
 
 <ul class="statsProfile">
   <li>
@@ -103,20 +108,34 @@
 <li>Likes: 78</li>
 </ul>
 
-<h3>Contacts:</h2>
 
-<img>
+<div class="contacts">
+<h3>Contacts:</h3>
 
+<img src="https://picsum.photos/50" alt="Contact Profile Picture" class="pfp img-fluid">
 </img>
-  
+<img src="https://picsum.photos/50" alt="Contact Profile Picture" class="pfp img-fluid">
+</img>
+<img src="https://picsum.photos/50" alt="Contact Profile Picture" class="pfp img-fluid">
+</img>
+<img src="https://picsum.photos/50" alt="Contact Profile Picture" class="pfp img-fluid">
+</img>
+<img src="https://picsum.photos/50" alt="Contact Profile Picture" class="pfp img-fluid">
+</img>
+<img src="https://picsum.photos/50" alt="Contact Profile Picture" class="pfp img-fluid">
+</img>
+
+</div>
+<i class="fa-solid fa-chevron-down fa-xl fa-2x d-flex align-items-center justify-content-center"></i>
+
 </div>
 
 <div class="line-break"></div>
-<div id="profilePosts">
+<div id="examplePosts">
 
   <h2>Your stickys</h2>
 
-    <div class="card text-bg-secondary mb-3" style="max-width: 18rem;">
+    <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
         <div class="card-header">Topic</div>
         <div class="card-body">
           <h5 class="card-title">Example title</h5>
@@ -130,7 +149,7 @@
         </div>
       </div>
 
-  <div class="card text-bg-secondary mb-3" style="max-width: 18rem;">
+  <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
     <div class="card-header">Topic</div>
     <div class="card-body">
       <h5 class="card-title">Example title</h5>
@@ -145,8 +164,8 @@
   </div>
 
  
-  <div class="card text-bg-secondary mb-3" style="max-width: 18rem;">
-    <div class="card-header">Topic</div>
+  <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
+    <div class="card-header">long topic name max</div>
     <div class="card-body">
       <h5 class="card-title">Max characters</h5>
       <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m
@@ -168,13 +187,13 @@
 </div>
 <footer class="py-3 my-4">
   <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-    <li class="nav-item"><a href="home.html" class="nav-link px-2 text-muted">Home</a></li>
-    <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">About</a></li>
-    <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Privacy</a></li>
-    <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Contact</a></li>
-    <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Log Out</a></li>
+    <li class="nav-item"><a href="home.html" class="nav-link px-2 text-body">Home</a></li>
+    <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body">About</a></li>
+    <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body">Privacy</a></li>
+    <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body">Contact</a></li>
+    <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body">Log Out</a></li>
   </ul>
-  <p class="text-center text-muted">© 2022 Note Social, Inc</p>
+  <p class="text-center text-body">© 2022 Note Social, Inc</p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
